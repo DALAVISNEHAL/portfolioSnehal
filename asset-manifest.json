@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/github.io/portfolioSnehal/static/css/main.b4c8471e.css",
+    "main.js": "/github.io/portfolioSnehal/static/js/main.c1fe1d22.js",
+    "static/js/453.a50bc2ef.chunk.js": "/github.io/portfolioSnehal/static/js/453.a50bc2ef.chunk.js",
+    "static/media/about.jpg": "/github.io/portfolioSnehal/static/media/about.91e144fa8ff0cedc950a.jpg",
+    "static/media/banner-bg.png": "/github.io/portfolioSnehal/static/media/banner-bg.cc1273af450504afe755.png",
+    "index.html": "/github.io/portfolioSnehal/index.html",
+    "main.b4c8471e.css.map": "/github.io/portfolioSnehal/static/css/main.b4c8471e.css.map",
+    "main.c1fe1d22.js.map": "/github.io/portfolioSnehal/static/js/main.c1fe1d22.js.map",
+    "453.a50bc2ef.chunk.js.map": "/github.io/portfolioSnehal/static/js/453.a50bc2ef.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4c8471e.css",
+    "static/js/main.c1fe1d22.js"
+  ]
+}
