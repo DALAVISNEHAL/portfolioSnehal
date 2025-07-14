@@ -1,0 +1,7 @@
+.App {
+  background-image: url('./img/banner-bg.png');
+}
+
+html {
+  scroll-behavior: smooth;
+}
