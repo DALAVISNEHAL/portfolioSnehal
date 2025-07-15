@@ -1,6 +1,6 @@
 import { Box, Grid, Typography, Button } from '@mui/material';
 import { Typewriter } from 'react-simple-typewriter';
-import profileImage from '../img/about.jpg'; // adjust this path if needed
+import profileImage from '../img/about.jpg';
 
 function About() {
   return (
@@ -32,9 +32,7 @@ function About() {
         -- WHO I AM --
       </Typography>
 
-      {/* IMAGE + TEXT ROW */}
       <Grid container spacing={4} alignItems="center">
-        {/* IMAGE */}
         <Grid item xs={12} md={5}>
           <Box sx={{ textAlign: 'center' }}>
             <img
@@ -42,7 +40,7 @@ function About() {
               alt="Snehal"
               style={{
                 width: '100%',
-                maxWidth: '320px',
+                maxWidth: '280px',
                 borderRadius: '15px',
                 boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
               }}
@@ -50,9 +48,8 @@ function About() {
           </Box>
         </Grid>
 
-        {/* TEXT */}
-        <Grid item xs={12} md={7} >
-          <div style={{marginLeft: '400px', marginTop: '-500px'}}>
+        <Grid item xs={12} md={7}>
+          <Box sx={{ textAlign: { xs: 'center', md: 'left' }, px: { xs: 2, sm: 4 } }}>
             <Typography variant="h6" sx={{ fontWeight: 700, mb: 2 }}>
               I'm Snehal and I'm a{' '}
               <span style={{ color: '#d32f2f' }}>
@@ -86,7 +83,7 @@ function About() {
             >
               Download CV
             </Button>
-          </div>
+          </Box>
         </Grid>
       </Grid>
     </Box>
