@@ -4,22 +4,19 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { Link as ScrollLink } from 'react-scroll';
-import AdbIcon from '@mui/icons-material/Adb';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const pages = ['HOME', 'ABOUT', 'SERVICES', 'SKILLS'];
 
 function ResponsiveAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [scrolledSection, setScrolledSection] = React.useState('home');
 
   React.useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'about', 'services', 'skills', 'resume'];
-
       for (let id of sections) {
         const el = document.getElementById(id);
         if (el) {
@@ -36,20 +33,11 @@ function ResponsiveAppBar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Define which sections are light to adjust contrast
   const isLightSection = ['services', 'resume'].includes(scrolledSection);
   const textColor = isLightSection ? '#000' : '#fff';
   const bgColor = isLightSection
     ? 'rgba(255, 255, 255, 0.9)'
     : 'linear-gradient(to bottom, rgba(0,0,0,0.7), transparent)';
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
 
   return (
     <AppBar
@@ -64,7 +52,19 @@ function ResponsiveAppBar() {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1, color: textColor }} />
+          {/* Logo */}
+          {/* LinkedIn Icon (Right-Aligned) */}
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <IconButton
+              component="a"
+              href="https://www.linkedin.com/in/dalavisnehal/"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ color: textColor }}
+            >
+              <LinkedInIcon />
+            </IconButton>
+          </Box>
           <Typography
             variant="h6"
             noWrap
@@ -83,41 +83,7 @@ function ResponsiveAppBar() {
             PORTFOLIO
           </Typography>
 
-          {/* Mobile Menu Button */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-            </IconButton>
-            <Menu
-              anchorEl={anchorElNav}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{ display: { xs: 'block', md: 'none' } }}
-            >
-              {pages.map((page) => (
-                <ScrollLink
-                  key={page}
-                  to={page.toLowerCase()}
-                  smooth={true}
-                  duration={500}
-                  offset={-70}
-                >
-                  <Button
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: textColor, display: 'block' }}
-                  >
-                    {page}
-                  </Button>
-                </ScrollLink>
-              ))}
-            </Menu>
-          </Box>
-
-          {/* Mobile Logo */}
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1, color: textColor }} />
+          {/* Mobile logo (still shown if desired) */}
           <Typography
             variant="h5"
             noWrap
@@ -137,7 +103,7 @@ function ResponsiveAppBar() {
             PORTFOLIO
           </Typography>
 
-          {/* Desktop Menu Options */}
+          {/* Desktop Menu Options only */}
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <ScrollLink
@@ -148,7 +114,6 @@ function ResponsiveAppBar() {
                 offset={-70}
               >
                 <Button
-                  onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: textColor, display: 'block' }}
                 >
                   {page}
