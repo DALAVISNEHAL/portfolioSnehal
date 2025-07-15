@@ -81,7 +81,7 @@ function About() {
                 fontWeight: 'bold',
                 '&:hover': { backgroundColor: '#b71c1c' },
               }}
-              href="/Snehal_Bhanje_CV.pdf"
+              href={`${process.env.PUBLIC_URL}/Snehal_Bhanje_CV.pdf`}
               download
             >
               Download CV
