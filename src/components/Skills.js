@@ -24,7 +24,7 @@ const Skills = () => {
             I’m a passionate Frontend Developer with 4+ years of experience in building modern, responsive, and user-friendly web applications using React, Angular, JavaScript, HTML, and CSS. I have hands-on experience in full-stack development, writing test cases, and deploying applications. My focus is on delivering clean, maintainable code and crafting seamless user experiences. I am also experienced in collaborating with cross-functional teams and handling end-to-end project lifecycles efficiently.
           </p>
           <a
-            href={`${process.env.PUBLIC_URL}/Snehal_Bhanje_CV.pdf`}
+            href="/portfolioSnehal/Snehal_Bhanje_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >

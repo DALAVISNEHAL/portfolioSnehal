@@ -44,7 +44,7 @@ function Home() {
             </Typography>
 
             <a
-                href={`${process.env.PUBLIC_URL}/Snehal_Bhanje_CV.pdf`}
+                href="/portfolioSnehal/Snehal_Bhanje_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
             >
